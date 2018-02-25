@@ -12,23 +12,32 @@ body {
 }
 
 #container {
+	box-sizing: border-box;
 	height: 100vh;
 	background-color: $color;
-	@include prefixed(transition, all 2s);
+	padding-top: 48px;
+	@include prefixed(transition, background-color 2s);
+	@media screen and (max-width: 650px) {
+		padding-top: 0;
+	}
 }
 
 #quote {
 	padding: 16px 16px;
 	color: $color;
 	background-color: #111;
-	min-height: 100px;
-	position: absolute;
-	top: 30%;
-	left: 35%;
 	width: 30%;
-	margin: auto;
+	margin:auto;
 	@include prefixed(box-shadow, -10px 10px 5px 0px rgba(0,0,0,0.75));
-	@include prefixed(transition, all 2s);
+	@include prefixed(transition, color 2s);
+	@media screen and (max-width: 900px) {
+		width: 50%;
+	}
+	@media screen and (max-width: 650px) {
+		width: 100%;
+		height: 100%;
+		@include prefixed(box-shadow, none);
+	}
 }
 
 #quote-text {

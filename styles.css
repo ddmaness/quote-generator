@@ -3,28 +3,39 @@ body {
   padding: 0; }
 
 #container {
+  box-sizing: border-box;
   height: 100vh;
-  background-color: #0a0a00;
-  -webkit-transition: all 2s;
-  -moz-transition: all 2s;
-  transition: all 2s; }
+  background-color: #00060f;
+  padding-top: 48px;
+  -webkit-transition: background-color 2s;
+  -moz-transition: background-color 2s;
+  transition: background-color 2s; }
+  @media screen and (max-width: 650px) {
+    #container {
+      padding-top: 0; } }
 
 #quote {
   padding: 16px 16px;
-  color: #0a0a00;
+  color: #00060f;
   background-color: #111;
-  min-height: 100px;
-  position: absolute;
-  top: 30%;
-  left: 35%;
   width: 30%;
   margin: auto;
   -webkit-box-shadow: -10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: -10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  -webkit-transition: all 2s;
-  -moz-transition: all 2s;
-  transition: all 2s; }
+  -webkit-transition: color 2s;
+  -moz-transition: color 2s;
+  transition: color 2s; }
+  @media screen and (max-width: 900px) {
+    #quote {
+      width: 50%; } }
+  @media screen and (max-width: 650px) {
+    #quote {
+      width: 100%;
+      height: 100%;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none; } }
 
 #quote-text, #quote-author {
   font-size: 24px;
@@ -83,7 +94,7 @@ body {
     transform: rotate(-50deg); } }
 #new-quote {
   cursor: pointer;
-  stroke: #0a0a00;
+  stroke: #00060f;
   -webkit-transition: all 2s;
   -moz-transition: all 2s;
   transition: all 2s; }
