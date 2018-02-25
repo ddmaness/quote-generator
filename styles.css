@@ -1,11 +1,21 @@
+/*
+============================================
+Base Rules
+============================================
+*/
 body {
   margin: 0;
   padding: 0; }
 
+/*
+============================================
+Quote Card Module
+============================================
+*/
 #container {
   box-sizing: border-box;
   height: 100vh;
-  background-color: #00060f;
+  background-color: #170f18;
   padding-top: 48px;
   -webkit-transition: background-color 2s;
   -moz-transition: background-color 2s;
@@ -16,7 +26,7 @@ body {
 
 #quote {
   padding: 16px 16px;
-  color: #00060f;
+  color: #170f18;
   background-color: #111;
   width: 30%;
   margin: auto;
@@ -54,6 +64,11 @@ body {
   #quote-author::before {
     content: '-'; }
 
+/*
+============================================
+Twitter Logo Module
+============================================
+*/
 @keyframes lift {
   0% {
     transform: translate(0); }
@@ -70,6 +85,7 @@ body {
     transform: rotateY(0) rotate(0); } }
 #twitter-logo {
   height: 48px;
+  fill: #170f18;
   -webkit-transition: all 2s;
   -moz-transition: all 2s;
   transition: all 2s; }
@@ -82,6 +98,11 @@ body {
 #twitter-logo-body.is-animated {
   animation: lift 1.5s ease-in-out infinite; }
 
+/*
+============================================
+New Quote Button Module
+============================================
+*/
 @keyframes spin {
   0% {
     transform: rotate(-50deg); }
@@ -94,7 +115,7 @@ body {
     transform: rotate(-50deg); } }
 #new-quote {
   cursor: pointer;
-  stroke: #00060f;
+  stroke: #170f18;
   -webkit-transition: all 2s;
   -moz-transition: all 2s;
   transition: all 2s; }

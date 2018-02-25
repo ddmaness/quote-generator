@@ -1,3 +1,4 @@
+// variables
 $numberList : random(25), random(25), random(25);
 $color : rgb(25 - (nth($numberList, 1)), 25 - (nth($numberList, 2)), 25 - (nth($numberList, 3)));
 @mixin prefixed($property, $value: all 2s) {
@@ -6,10 +7,22 @@ $color : rgb(25 - (nth($numberList, 1)), 25 - (nth($numberList, 2)), 25 - (nth($
 	#{$property}: $value;
 }
 
+/*
+============================================
+Base Rules
+============================================
+*/
+
 body {
 	margin: 0;
 	padding: 0;
 }
+
+/*
+============================================
+Quote Card Module
+============================================
+*/
 
 #container {
 	box-sizing: border-box;
@@ -60,46 +73,59 @@ body {
 	}
 }
 
+/*
+============================================
+Twitter Logo Module
+============================================
+*/
+
 @keyframes lift {
-  0% {
-    transform: translate(0);
-  }
-  50%{
-    transform: translate(0, -20px);
-  }
-  100% {
-    transform: translate(0);
-  }
+  	0% {
+    	transform: translate(0);
+  	}
+  	50%{
+    	transform: translate(0, -20px);
+  	}
+  	100% {
+    	transform: translate(0);
+  	}
 }
 
 @keyframes flap {
-  0% {
-    transform: rotateY(0) rotate(0)
-  }
-  50% {
-    transform: rotateY(150deg) rotate(-50deg) translate(-60px, -20px);; 
-  }
-  100% {
-    transform: rotateY(0) rotate(0);
-  }
+  	0% {
+    	transform: rotateY(0) rotate(0)
+  	}
+  	50% {
+    	transform: rotateY(150deg) rotate(-50deg) translate(-60px, -20px);; 
+  	}
+  	100% {
+   		transform: rotateY(0) rotate(0);
+  	}
 }
 
 
 #twitter-logo {
-  height: 48px;
-  @include prefixed(transition, all 2s);
+  	height: 48px;
+  	fill:$color;
+  	@include prefixed(transition, all 2s);
 }
 
 #twitter-logo-wings {
-  transform-origin:45% 53%;
-  &.is-animated{
-	animation: flap 1.5s ease-in-out infinite;
-  }
+  	transform-origin:45% 53%;
+  	&.is-animated{
+		animation: flap 1.5s ease-in-out infinite;
+  	}
 }
 
 #twitter-logo-body.is-animated {
   animation: lift 1.5s ease-in-out infinite;
 }
+
+/*
+============================================
+New Quote Button Module
+============================================
+*/
 
 @keyframes spin {
 	0% {
